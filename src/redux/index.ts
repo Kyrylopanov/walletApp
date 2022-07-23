@@ -1,13 +1,13 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { githubIssuesReducer, GlobalIssuesState } from './reducers/githubIssuesReducer';
+import { walletReducer, GlobalWalletState } from './reducers/walletReducer';
 
 export interface GlobalStateFull {
-  githubIssues: GlobalIssuesState;
+  wallet: GlobalWalletState;
 }
 
 const rootReducer = combineReducers<GlobalStateFull>({
-  githubIssues: githubIssuesReducer
+  wallet: walletReducer
 });
 
 export type ApplicationState = ReturnType<typeof rootReducer>;

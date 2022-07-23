@@ -1,12 +1,11 @@
 import React from "react";
-import { connect } from "react-redux";
 import { View, Text, FlatList } from "react-native";
 import { styles } from "./style";
-import { CurrencyItem } from "../../types/githubIssues";
+import { WalletItem } from "../../types/wallet";
 import { WalletsItem } from "../WalletsItem/WalletsItem";
 
 type Props = {
-  currencyList: CurrencyItem[];
+  currencyList: WalletItem[];
 };
 
 export const WalletsList: React.FC<Props> = (props) => {

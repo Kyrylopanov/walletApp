@@ -1,12 +1,11 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  main: { 
+  main: {
     flex: 1,
     paddingHorizontal: 16,
   },
   list: {
-    // borderRadius: 8,
     shadowColor: "#4972F40D",
     shadowOffset: {
       width: 2,
@@ -18,5 +17,8 @@ export const styles = StyleSheet.create({
   },
   textHeader: {
     marginBottom: 22,
-  }
+    marginLeft: 16,
+    fontWeight: "500",
+    fontSize: 16,
+  },
 });

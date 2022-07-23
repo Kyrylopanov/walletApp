@@ -1,37 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, TouchableOpacity, Text } from "react-native";
 import { Banker } from "../../../assets/images/Banker";
 import { Ether } from "../../../assets/images/Ether";
 import { PaxDollar } from "../../../assets/images/PaxDollar";
 import { UsDollar } from "../../../assets/images/UsDollar";
+import { walletApi } from "../../servises/walletApi";
+// import { useNavigation } from '@react-navigation/native';
 
-import { CurrencyItem } from "../../types/githubIssues";
+import { WalletItem } from "../../types/wallet";
 import { styles } from "./style";
+import { SCREEN_NAME_CURRENCY } from "../../constst/screens";
+import usePresenter from "./hooks/usePresenter";
+import { Bitcoin } from "../../../assets/images/Bitcoin";
 
 interface Props {
-  item: CurrencyItem;
+  item: WalletItem;
   isFirstElement: boolean;
   isLastElement: boolean;
 }
 
 export const WalletsItem: React.FC<Props> = (props) => {
   const { item, isFirstElement, isLastElement } = props;
+  const { navToCurrencyScreen } = usePresenter(item);
 
   const mapIdToImage: Record<number, JSX.Element> = {
-    1: <UsDollar />,
+    1: <Bitcoin />,
     2: <Ether />,
     3: <PaxDollar />,
     4: <Banker />,
   };
 
-  const goToDetails = () => {
-    // props.navigation.push('IssueDetails', { issue });
-  };
-
   return (
     <TouchableOpacity
       activeOpacity={0.8}
-      onPress={goToDetails}
+      onPress={navToCurrencyScreen}
       style={[
         styles.card,
         !isLastElement && styles.borderBottom,
