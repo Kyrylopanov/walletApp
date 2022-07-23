@@ -1,12 +1,18 @@
 import * as React from "react";
 import Svg, { Circle, Path, G } from "react-native-svg";
 
-export const UsDollar = () => {
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+export const UsDollar: React.FC<Props> = (props) =>  {
+  const { width = "39.998", height = "39.998" } = props;
   return (
     <Svg
       id="USD"
-      width="39.998"
-      height="39.998"
+      width={width}
+      height={height}
       viewBox="0 0 39.998 39.998"
     >
       <Circle

@@ -1,9 +1,15 @@
 import * as React from "react";
 import Svg, { Circle, Path, G } from "react-native-svg";
 
-export const Ether = () => {
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+export const Ether: React.FC<Props> = (props) =>  {
+  const { width = "40", height = "40" } = props;
   return (
-    <Svg id="ETH" width="40" height="40" viewBox="0 0 40 40">
+    <Svg id="ETH" width={width} height={width} viewBox="0 0 40 40">
       <Circle
         id="Ellipse_127"
         data-name="Ellipse 127"

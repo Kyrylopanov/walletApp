@@ -1,9 +1,15 @@
 import * as React from "react";
 import Svg, { Circle, Path, G } from "react-native-svg";
 
-export const PaxDollar = () => {
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+export const PaxDollar: React.FC<Props> = (props) => {
+  const { width = "40", height = "40" } = props;
   return (
-    <Svg id="PAX" width="40" height="40" viewBox="0 0 40 40">
+    <Svg id="PAX" width={width} height={height} viewBox="0 0 40 40">
       <G id="Layer_1" data-name="Layer 1">
         <G id="pax-2" data-name="pax">
           <Circle

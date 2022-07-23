@@ -1,9 +1,15 @@
 import * as React from "react";
 import Svg, { Circle, Path } from "react-native-svg";
 
-export const Bitcoin = () => {
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+export const Bitcoin: React.FC<Props> = (props) => {
+  const { width = "40", height = "40" } = props;
   return (
-    <Svg id="BTC" width="40" height="40" viewBox="0 0 40 40">
+    <Svg id="BTC" width={width} height={height} viewBox="0 0 40 40">
       <Circle
         id="Ellipse_133"
         data-name="Ellipse 133"

@@ -1,9 +1,15 @@
 import * as React from "react";
 import Svg, { Path, G } from "react-native-svg";
 
-export const Banker = () => {
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+export const Banker: React.FC<Props> = (props) => {
+  const { width = "40", height = "40" } = props;
   return (
-    <Svg id="BNK" width="40" height="40" viewBox="0 0 40 40">
+    <Svg id="BNK" width={width} height={height} viewBox="0 0 40 40">
       <G id="Layer_1" data-name="Layer 1">
         <G id="BNK-2" data-name="BNK">
           <Path
