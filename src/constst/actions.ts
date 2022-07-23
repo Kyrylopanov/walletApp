@@ -1,0 +1,1 @@
+export const ACTIONS_WALLET_GET_CURRENCIES: string = 'wallet_get_currencies';
