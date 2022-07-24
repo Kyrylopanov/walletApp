@@ -3,9 +3,15 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: "#F9F9FC",
+    backgroundColor: 'transparent',
     marginHorizontal: 16,
     marginTop: 115,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.10,
+    shadowRadius: 4,
   },
   convert: {
     position: "absolute",

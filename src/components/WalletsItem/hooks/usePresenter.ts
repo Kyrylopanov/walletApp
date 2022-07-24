@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
-import { ImageSourcePropType } from "react-native";
-import { useSelector } from "react-redux";
-import { GlobalStateFull } from "../../../redux";
+import { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { WalletItem } from "../../../types/wallet";
 import { walletApi } from "../../../servises/walletApi";

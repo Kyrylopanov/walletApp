@@ -17,7 +17,6 @@ export const WalletsList: React.FC<Props> = (props) => {
       <FlatList
         data={currencyList}
         keyExtractor={(item) => item.id + ""}
-        style={styles.list}
         renderItem={({ item, index }) => (
           <WalletsItem
             item={item}

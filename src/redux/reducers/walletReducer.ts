@@ -16,7 +16,7 @@ export const walletReducer = (
   const { type, payload } = action || {};
 
   if (type === ACTIONS_WALLET_GET_CURRENCIES) {
-    return { ...state, currencies: [...state.currencies, action.payload] };
+    return { ...state, currencies: [...state.currencies, payload] };
   }
 
   return state;

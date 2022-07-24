@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   main: {
     marginHorizontal: 16,
-    top: 146,
+    marginTop: 146,
   },
   textLabel: {
     color: "#102D6F",
@@ -30,6 +30,7 @@ export const styles = StyleSheet.create({
   },
   inputLeftContainer: {
     flexDirection: "row",
+    alignItems: "center",
   },
   input: {
     paddingLeft: 13,

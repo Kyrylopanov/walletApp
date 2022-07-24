@@ -11,11 +11,11 @@ import {
   SCREEN_NAME_CURRENCY,
   SCREEN_NAME_PORTFOLIO,
 } from "./src/constst/screens";
-import { Currency } from "./src/types/wallet";
+import { WalletItem } from "./src/types/wallet";
 
 export type RootStackParamList = {
   SCREEN_NAME_PORTFOLIO: undefined;
-  SCREEN_NAME_CURRENCY: Currency;
+  SCREEN_NAME_CURRENCY: WalletItem;
 };
 
 const Stack = createNativeStackNavigator();
@@ -24,8 +24,11 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <ReduxProvider store={store}>
+        <StatusBar style="dark" />
         <NavigationContainer theme={DefaultTheme}>
-          <Stack.Navigator>
+          <Stack.Navigator
+            screenOptions={{ headerStyle: { backgroundColor: '#F9F9FC' } }}
+          >
             <Stack.Screen
               name={SCREEN_NAME_PORTFOLIO}
               component={PortfolioScreen}
@@ -38,7 +41,6 @@ export default function App() {
             />
           </Stack.Navigator>
         </NavigationContainer>
-        <StatusBar style="dark" />
       </ReduxProvider>
     </SafeAreaProvider>
   );

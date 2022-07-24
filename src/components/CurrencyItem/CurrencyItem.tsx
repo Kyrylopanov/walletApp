@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { View, Text, TextInput } from "react-native";
 import { Banker } from "../../../assets/images/Banker";
 import { Bitcoin } from "../../../assets/images/Bitcoin";
@@ -6,12 +6,12 @@ import { Ether } from "../../../assets/images/Ether";
 import { Group } from "../../../assets/images/Group";
 import { PaxDollar } from "../../../assets/images/PaxDollar";
 import { UsDollar } from "../../../assets/images/UsDollar";
-import { Currency } from "../../types/wallet";
+import { WalletItem } from "../../types/wallet";
 import usePresenter from "./hooks/usePresenter";
 import { styles } from "./style";
 
 interface Props {
-  item: Currency | undefined;
+  item: WalletItem | undefined;
 }
 
 export const CurrencyItem: React.FC<Props> = (props) => {

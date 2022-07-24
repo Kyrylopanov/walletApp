@@ -4,15 +4,12 @@ export const styles = StyleSheet.create({
   main: {
     flex: 1,
     paddingHorizontal: 16,
-  },
-  list: {
-    shadowColor: "#4972F40D",
     shadowOffset: {
-      width: 2,
-      height: 2,
+      width: 0,
+      height: 4,
     },
-    shadowRadius: 3,
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.10,
+    shadowRadius: 4,
     elevation: 4,
   },
   textHeader: {

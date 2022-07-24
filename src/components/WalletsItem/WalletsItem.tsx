@@ -1,15 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { View, TouchableOpacity, Text } from "react-native";
 import { Banker } from "../../../assets/images/Banker";
 import { Ether } from "../../../assets/images/Ether";
 import { PaxDollar } from "../../../assets/images/PaxDollar";
-import { UsDollar } from "../../../assets/images/UsDollar";
-import { walletApi } from "../../servises/walletApi";
-// import { useNavigation } from '@react-navigation/native';
 
 import { WalletItem } from "../../types/wallet";
 import { styles } from "./style";
-import { SCREEN_NAME_CURRENCY } from "../../constst/screens";
 import usePresenter from "./hooks/usePresenter";
 import { Bitcoin } from "../../../assets/images/Bitcoin";
 

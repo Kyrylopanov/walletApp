@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { Currency } from "../../../types/wallet";
+import { WalletItem } from "../../../types/wallet";
 
-const usePresenter = (item: Currency | undefined) => {
-  const [amountPay, onChangeAmountPay] = useState("");  
+const usePresenter = (item: WalletItem | undefined) => {
+  const [amountPay, onChangeAmountPay] = useState("");
 
   return {
     onChangeAmountPay,
     amountPay,
-    receiveAmount: item ? (Number(amountPay) / item.last).toFixed(2) : null,
+    receiveAmount: item?.last ? (Number(amountPay) / item.last).toFixed(2) : null,
   };
 };
 
