@@ -6,11 +6,11 @@ import usePresenter from "./hooks/usePresenter";
 import { styles } from "./style";
 
 export const PortfolioScreen = () => {
-  const { totalAmount, currencyList } = usePresenter();
+  const { amount, currencyList } = usePresenter();
 
   return (
     <SafeAreaView style={styles.main}>
-      <Total totalAmount={totalAmount} />
+      <Total amount={amount}/>
       <WalletsList currencyList={currencyList} />
     </SafeAreaView>
   );

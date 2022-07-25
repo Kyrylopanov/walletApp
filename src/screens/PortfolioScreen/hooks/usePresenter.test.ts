@@ -64,4 +64,9 @@ describe("Portfolio screen usePresenter test suite ===>", () => {
     ];
     expect(usePresenter().currencyList).toEqual(expectedResultWitLast);
   });
+
+  it("should return amount before and after decimals", () => {
+    expect(usePresenter().amount.beforeDecimals).toEqual("7029");
+    expect(usePresenter().amount.afterDecimals).toEqual("06");
+  });
 });

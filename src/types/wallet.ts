@@ -17,3 +17,8 @@ export interface Currency {
   lastHP: number
   timestamp: number
 }
+
+export type Amount = {
+  beforeDecimals: string;
+  afterDecimals: string;
+};

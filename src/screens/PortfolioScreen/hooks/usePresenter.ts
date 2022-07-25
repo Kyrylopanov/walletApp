@@ -1,16 +1,23 @@
 import { useSelector } from "react-redux";
 import { GlobalStateFull } from "../../../redux";
-import { WalletItem } from "../../../types/wallet";
+import { Amount, WalletItem } from "../../../types/wallet";
 
 const usePresenter = () => {
   const { wallet } = useSelector((state: GlobalStateFull) => state);
   const { currencies } = wallet;
 
   const getExchangeValue = (currencyFrom: string) => {
-    return currencies.filter(currItem => currItem.currencyFrom === currencyFrom).find(item => item.last)?.last
-  }  
+    return currencies
+      .filter((currItem) => currItem.currencyFrom === currencyFrom)
+      .find((item) => item.last)?.last;
+  };
 
-  const totalAmount = "7029.06";
+  const totalAmount = 7029.06;
+
+  const amount: Amount = {
+    beforeDecimals: totalAmount.toString().split(".")[0],
+    afterDecimals: totalAmount.toString().split(".")[1],
+  };
 
   const currencyList: WalletItem[] = [
     {
@@ -19,7 +26,7 @@ const usePresenter = () => {
       value: "5000 USD",
       id: 1,
       currencyFrom: "BTC",
-      last: getExchangeValue('BTC'),
+      last: getExchangeValue("BTC"),
     },
     {
       name: "Ether",
@@ -27,7 +34,7 @@ const usePresenter = () => {
       value: "5000 USD",
       id: 2,
       currencyFrom: "ETH",
-      last: getExchangeValue('ETH'),
+      last: getExchangeValue("ETH"),
     },
     {
       name: "Pax Dollar",
@@ -35,7 +42,7 @@ const usePresenter = () => {
       value: "5000 USD",
       id: 3,
       currencyFrom: "USDP",
-      last: getExchangeValue('USDP'),
+      last: getExchangeValue("USDP"),
     },
     {
       name: "Banker",
@@ -43,12 +50,12 @@ const usePresenter = () => {
       value: "5000 USD",
       id: 4,
       currencyFrom: "BNK",
-      last: getExchangeValue('BNK'),
+      last: getExchangeValue("BNK"),
     },
   ];
 
   return {
-    totalAmount,
+    amount,
     currencyList,
   };
 };

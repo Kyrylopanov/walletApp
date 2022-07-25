@@ -16,9 +16,15 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 6,
   },
-  amountText: {
+  amount: {
     paddingLeft: 9,
     fontSize: 32,
     fontWeight: 'bold',
+    color: '#102D6F',
+  },
+  afterDecimals: {
+    fontSize: 20,
+    color: '#102D6F',
+    fontWeight: '300',
   },
 });
